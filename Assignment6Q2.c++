@@ -28,10 +28,9 @@ class employee{
     void setid(){
         cout<<"enter id";
         cin>>this->id;
-        cout<<endl;
     }
     void displayemp(){
-        cout<<this->id<<endl<<this->sal;
+        cout<<"Id: "<<this->id<<endl<<"Salary: "<<this->sal;
     }
     void acceptemp(){
         this->setid();
@@ -61,7 +60,7 @@ class manager:virtual public employee{
     }
     void displayman(){
         displayemp();
-        cout<<this->bonus<<endl;
+        cout<<"Bouns: "<<this->bonus<<endl;
 
     }
     void acceptman(){
@@ -70,7 +69,7 @@ class manager:virtual public employee{
     }
      protected:
     void display_manager(){
-        cout<<this->bonus<<endl;
+        cout<<"Bouns: "<<this->bonus<<endl;
     }
     void accept_manager(){
         setbonus();
@@ -100,7 +99,7 @@ class salesman :virtual public employee{
     }
     void displaysale(){
         displayemp();
-        cout<<this->comm<<endl;
+        cout<<"Comm: "<<this->comm<<endl;
         
     }
     void acceptsale(){
@@ -109,7 +108,7 @@ class salesman :virtual public employee{
     }
     protected:
     void display_salesman(){
-        cout<<this->comm<<endl;
+        cout<<"Comm: "<<this->comm<<endl;
     }
     void accept_salesman(){
         setcomm();
